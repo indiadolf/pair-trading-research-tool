@@ -1,3 +1,6 @@
+import matplotlib
+matplotlib.use("Agg")
+
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
@@ -155,6 +158,6 @@ if analyze:
 
 st.markdown("---")
 st.caption(
-    "👨‍💻 Developed by Parth Sharma & Priyanshu Kindo | "
+    "👨‍💻 Developed by Parth Sharma | "
     "Educational & research use only — not financial advice."
 )

@@ -48,7 +48,7 @@ st.set_page_config(page_title="Pair Trading Research Tool", layout="wide")
 st.title("📈 Pair Trading Research Tool")
 st.markdown("""
 **Developed by Parth Sharma**  
-**Co-Developed by Priyanshu Kindo & Ashutosh Rathore**  
+              
 _Pair Trading Research & Decision Support Tool_
 """)
 st.markdown("---")
@@ -179,18 +179,23 @@ if analyze:
     st.write(f"Total P&L (spread units): {pnl:.2f}")
 
     st.markdown("### 📝 Explanation")
+    p_value_display = f"{p_value:.4f}" if p_value is not None else "N/A"
     st.info(
-        f"""
-        • Correlation: **{corr:.2f}**  
-        • ADF p-value: **{p_value:.4f if p_value else 'N/A'}**  
-        • Z-score: **{z_score:.2f}**
+    f"""
+    • The pair shows a correlation of **{corr:.2f}**  
+    • ADF p-value: **{p_value_display}**
 
-        Signal **{signal}** generated based on deviation from equilibrium.
-        """
-    )
+    This indicates {'a statistically valid mean-reverting relationship'
+    if p_value is not None and p_value < 0.05 else
+    'weak or no cointegration'}.
+
+    • Current Z-score: **{z_score:.2f}**  
+    • Resulting signal: **{signal}**
+    """
+)
 
 st.markdown("---")
 st.caption(
-    "👨‍💻 Parth Sharma ·\n"
+    "👨‍💻 Developed by Parth Sharma ·\n"
     "Educational & research use only — not financial advice."
 )

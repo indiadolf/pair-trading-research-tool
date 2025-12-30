@@ -9,7 +9,7 @@ This tool helps analyze whether two stocks exhibit **mean-reverting behavior**, 
 ---
 
 ##  Live App
-👉 *(Paste your Streamlit app link here once deployed)*
+👉 https://pair-trading-research-tool-agexj8cwh7t5us8a3jvxmz.streamlit.app/
 
 ---
 

@@ -59,9 +59,9 @@ st.header("🔍 Analyze a Stock Pair")
 
 c1, c2 = st.columns(2)
 with c1:
-    stock_a = st.text_input("Stock A (Yahoo symbol)", "HDFCBANK.NS")
+    stock_a = st.text_input("Stock A (NSE ticker, e.g. HDFCBANK.NS)", "HDFCBANK.NS")
 with c2:
-    stock_b = st.text_input("Stock B (Yahoo symbol)", "ICICIBANK.NS")
+    stock_b = st.text_input("Stock B (NSE ticker, e.g. ICICIBANK.NS)", "ICICIBANK.NS")
 
 c3, c4 = st.columns(2)
 with c3:

@@ -177,9 +177,9 @@ if analyze:
     st.markdown("### 💼 Backtest Summary")
     st.write(f"Total Trades: {trades}")
     st.write(f"Total P&L (spread units): {pnl:.2f}")
-    st.write(f"📉 Max Drawdown: {max_dd:.2f}")
+    st.write(f"📉 Max Drawdown (absolute): {max_dd:.2f}")
 
-    
+
     st.markdown("### 📝 Explanation")
     p_value_display = f"{p_value:.4f}" if p_value is not None else "N/A"
     st.info(
